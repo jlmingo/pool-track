@@ -19,15 +19,12 @@ def img_to_pool(preprocessed_image):
 
 def is_pool(processed_image, path, tile, filename):
     grid = np.empty((4,4))
-    print(np.mean(processed_image))
-    print(path)
     for i in range(4):
         for j in range(4):
             grid[i,j] = np.mean(processed_image[64*i:64*i+64, 64*j:64*j+64])
     max_index = np.where(grid == np.amax(grid))
     max_index = np.resize(np.stack(max_index), (1,2))
     max_value = np.amax(grid)
-    print(max_index)
     max_value_position = ((max_index[0,0]+1-0.5)/4, (max_index[0,1]+1-0.5)/4)
     tile_pool = [tile[0]+max_value_position[0], tile[1]+max_value_position[1]]
     coordinates = num2deg(tile_pool[0], tile_pool[1])
