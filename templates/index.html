@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<style>
+    .larger-image    {
+      width: 200px;
+    }
+    html {
+     scroll-behavior: smooth;
+    }
+    h4 {
+  font-family: roboto-mono;
+  text-align: left
+}
+    p{
+        text-align: left;
+        font-family: roboto-mono;
+    }
+
+    .container{
+        text-align: center;
+        font-family: roboto-mono;
+    }
+</style>
+<div class="container-fluid">
+<html lang="en">
+    <link href="https://fonts.google.com/specimen/Roboto+Mono" rel="stylesheet" type="text/css">
+<head>
+    <title>Pool-Rastreator / The easiest way to locate swimming pools in a map</title>
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <meta charset="utf-8">
+  <title>Myntra</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://storage.googleapis.com/code.getmdl.io/1.1.0/material.indigo-pink.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+</head>
+<body style="overflow: scroll">
+ 
+    <div class="containerfluid">
+        <div class="header">
+            <h3 class="text-muted">Python Flask App</h3>
+        </div>
+ 
+        <div class="jumbotron text-center">
+            <h1>Pool-Rastreator</h1>
+        </div>
+ 
+        <div class="row marketing">
+                <h4>Area selection</h4>
+                <p>Introduce coordinates for the area you want to inspect!</p>
+                <form>
+                    Right-top longitude:<br>
+                    <input type="text" name="rt-long"><br><br>
+                    Right-top latitude:<br>
+                    <input type="text" name="rt-lat"><br><br>
+                    Left-bottom longitude:<br>
+                    <input type="text" name="lb-long"><br><br>
+                    Left-bottom latitude:<br>
+                    <input type="text" name="rt-lat"><br>
+                    <br>
+                    <input type="submit" value="Submit">
+                  </form>
+                  
+                <h4>Detect pools!</h4>
+                <p>Check if photos from Step 1 contain pools</p>
+                <input type="submit" value="Go!!">
+                <h4>Check current database</h4>
+                 <p>Watch below swimming pools found in the database</p>
+                <iframe src="map.html" allign="center" width="100%" height="500px"></iframe>
+            </div>
+            
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; Jorge López-Mingo 2019    </p>
+        </footer>
+ 
+    </div>
+</div>
+</html>

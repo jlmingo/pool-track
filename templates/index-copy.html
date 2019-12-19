@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Python Flask Bucket List App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Font Awesome Icons</title>
+  <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../static/css/theme.css">
+  <link href="https://fonts.google.com/specimen/Titillium+Web?selection.family=Titillium+Web" rel="stylesheet"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel=“stylesheet” href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css 13" />
+</head>
+
+<body>
+  <article class="kontext">
+    <div class="layer one show">
+      <h3>Pool Rastreator</h3>
+      <h2>Start!</h2>
+      <h1>Select coordinates for the area you want to analyze</h1><br>
+      <form class="form-horizontal" action="/" method="POST">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="top-l-coord">Top-left coordinate:</label>
+          <div class="col-sm-10">
+            <input type="coord" class="form-control" id="top-l-coord" name="top-l-coord" placeholder="(longitude, latitude)">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="bottom-r-coord">Bottom-right coordinate:</label>
+          <div class="col-sm-10">
+            <input type="coord" class="form-control" id="bottom-r-coord" name="bottom-r-coord" placeholder="(longitude, latitude)">
+          </div>
+        </div>
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" id="submit" class="btn btn-primary btn-lg" action="/">Go!</button>
+          </div><br>
+          {% if submission_successful %}
+          <p id="success">{{message}}</p>
+          {% endif %}
+        </div>
+      </form>
+
+
+
+      <footer class="footer">
+
+        <p><i class="fa fa-github fa-lg" aria-hidden="true"></i> <a href="https://github.com/jlmingo/">
+            jlmingo </a></p>
+
+      </footer>
+    </div>
+    <div class="layer two">
+      <h3>Pool Rastreator</h3>
+      <h2>Start detecting</h2>
+      <p>Automatic analysis and location on the previous selection</p>
+      <footer class="footer">
+        <p><i class="fa fa-github fa-lg" aria-hidden="true"></i> <a href="https://github.com/jlmingo/">
+            jlmingo </a></p>
+
+      </footer>
+    </div>
+    <div class="layer three">
+      <h3>Pool Rastreator</h3>
+      <h2>Located Pools</h2>
+      <iframe allign="center" src="/map.html" width="35%" height="35%"></iframe>
+      <footer class="footer">
+
+        <p><i class="fa fa-github fa-lg" aria-hidden="true"></i> <a href="https://github.com/jlmingo/">
+            jlmingo </a></p>
+
+      </footer>
+    </div>
+  </article>
+  <ul class="bullets"></ul>
+  <script src="/static/js/script.js"></script>
+
+</body>
+
+</html>
