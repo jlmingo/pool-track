@@ -10,7 +10,6 @@ mongodbUrl = os.getenv("CLIENT")
 client = MongoClient(mongodbUrl)
 try:
     print(f"connecting to {mongodbUrl[0:12]}")
-    # The ismaster command is cheap and does not require auth.
     client.admin.command('ismaster')
     print("Connected")
 except ConnectionFailure:
