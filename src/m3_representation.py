@@ -28,5 +28,5 @@ def update_map():
     m_1.add_child(mc)
 
     embed_map(m_1, "./templates/map.html")
-
+    print("New map generated. Please restart application to see new swimming pools.")
     return m_1
